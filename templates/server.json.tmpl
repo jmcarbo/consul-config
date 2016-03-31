@@ -14,7 +14,7 @@
     "key_file": "/opt/rancher/ssl/consul.key",
     "verify_incoming": true,
     "verify_outgoing": true,
-    "log_level": "INFO" {{ if ne (getenv "ACL_MASTER_TOKEN") "" -}},
+    "log_level": "INFO" {{ if (ne (getenv "ACL_MASTER_TOKEN") "") -}},
     "acl_datacenter": "dc1",
     "acl_default_policy": "allow",
     "acl_down_policy": "allow",
